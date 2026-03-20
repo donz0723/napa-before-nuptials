@@ -1,58 +1,59 @@
-# Napa Before Nuptials — RSVP Form Expansion
+# Napa Before The Nuptials — Site UI & Content
 
 ## What This Is
 
-A static HTML bachelorette weekend site for Donna's August 6–9, 2026 trip to San Francisco and Napa Valley. The site is already designed and deployed — this work expands the RSVP section to collect comprehensive guest preference data so the organizer can plan every detail of the weekend: hotel rooms, activities, spa, and Napa logistics.
+A static HTML bachelorette weekend site for Donna's August 6–9, 2026 trip to San Francisco and Napa Valley. The site is live at GitHub Pages and serves as the trip hub — itinerary, RSVP form, hotel info, wayfinding, and Outside Lands add-on details.
 
 ## Core Value
 
-Guests submit one form that gives the organizer everything needed to plan the full weekend — no follow-up emails, no guesswork.
+Guests land on one beautiful page that tells them everything they need to know, gets excited about the weekend, and collects all the info the organizer needs — no emails back and forth.
 
 ## Requirements
 
 ### Validated
 
-(None yet — ship to validate)
+- ✓ Site renamed to "Napa Before The Nuptials" — all occurrences updated
+- ✓ Pink/tie-dye hero redesign — new color variables, layered gradients, animated blobs
+- ✓ Itinerary copy updated across all 4 days (Arrival Day, Napa Valley, Reset & Celebrate, Departures)
+- ✓ Friday winery order corrected (Winery #1 → Lunch Among the Vines → Winery #2)
+- ✓ Sunday "Goodbye Brunch" + Outside Lands clickable link
+- ✓ Lineup description updated ("Three days… with my favorite people")
+- ✓ Form section heading changed to "A Few More Details"
 
 ### Active
 
-- [ ] Update the RSVP section's left-side question preview list to reflect all new questions
-- [ ] Provide a complete, copy-ready Google Form question set with all fields, options, and question types
-- [ ] Include Saturday activity preference (yoga class / hike / spa treatments / city free time)
-- [ ] Include spa interest gauge (yes / maybe / no)
-- [ ] Include wine preference for Napa day (reds / whites / rosé / sparkling / non-drinker) — helps with winery selection
-- [ ] Include a message to the bride field
-- [ ] Include "anything to celebrate this weekend?" field (birthdays, milestones)
-- [ ] Retain all existing fields: name, email, dietary restrictions, hotel room type, roommate preference, arrival time, Outside Lands interest, t-shirt size, open notes
+- [ ] Remove phone number field from RSVP form
+- [ ] Google Form Blueprint — copy-ready question set for organizer to build in Google Forms
+- [ ] RSVP section HTML updated to match expanded form (question list, intro copy, iframe height)
 
 ### Out of Scope
 
-- Custom backend / database — Google Forms handles all data collection
-- Building the actual Google Form — user creates it in Google Forms; we provide the question blueprint
-- Major redesign of the RSVP section layout — keep existing structure, expand the preview list
+- Custom form backend — Google Forms handles all data collection
+- JavaScript-powered features — vanilla HTML/CSS only
+- Major structural redesign — existing layout is working well
 
 ## Context
 
-- **Existing site**: `/Users/donz23/Napa before Nuptials/index.html` — single-file static HTML, no build system
-- **Design system**: Cormorant Garamond + DM Sans, ivory/gold/terra/sage palette, editorial aesthetic
-- **RSVP mechanism**: Google Form iframe embed (src URL is a placeholder — user will paste real URL after building the form)
+- **Live site**: `https://donz0723.github.io/napa-before-nuptials/`
+- **Source**: `/Users/donz23/Napa before Nuptials/index.html` — single-file static HTML, no build system
+- **Design system**: Cormorant Garamond + DM Sans, blush/pink/lavender/peach palette, editorial aesthetic
+- **Deploy**: git push to `main` → GitHub Pages auto-deploys
 - **Event**: August 6–9, 2026 · San Francisco (Westin St. Francis) + Napa Valley day trip (Friday)
-- **Saturday activities**: Yoga, hike, spa treatments, or city free time — guests pick preference
-- **Organizer**: Donna (dlyakhov23@gmail.com)
 
 ## Constraints
 
 - **Tech stack**: Vanilla HTML/CSS only — no JS frameworks, no build tools
-- **Form backend**: Google Forms only — no Formspree, no custom backend
-- **Scope**: Minimal — touch only the RSVP section HTML; preserve all design tokens and layout
+- **Single file**: All styles and markup in `index.html`
+- **Form backend**: Google Forms only
 
 ## Key Decisions
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Keep Google Form embed | Easiest for organizer to manage responses in Google Sheets | — Pending |
-| Include wine preferences | Napa winery selection depends on group's taste profile | — Pending |
-| Include fun extras (bride message, celebrations) | Standard for bachelorette; adds warmth without complexity | — Pending |
+| GitHub Pages for hosting | Zero-config, free, deploys on push | ✓ Good |
+| Pink/tie-dye theme | User requested softer, more feminine aesthetic | ✓ Good |
+| Google Form embed | Easiest for organizer to manage responses in Google Sheets | — Pending |
+| Remove phone number field | Reduces friction; email sufficient for coordination | — Pending |
 
 ---
-*Last updated: 2026-03-19 after initialization*
+*Last updated: 2026-03-19 after pivoting scope to UI & content*
