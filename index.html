@@ -10,19 +10,24 @@
 
   <style>
     :root {
-      --ivory:    #F5EDD6;
-      --ivory-2:  #EDE2BC;
+      --ivory:    #FDF0F5;
+      --ivory-2:  #F5E8EF;
       --dark:     #1A0F26;
       --dark-2:   #231540;
       --gold:     #E09418;
       --gold-l:   #F0B030;
       --terra:    #7B3A6A;
       --sage:     #3E8B6A;
-      --text:     #1A0F26;
-      --mid:      #6E6878;
-      --faint:    rgba(26,15,38,0.38);
-      --rule:     rgba(26,15,38,0.09);
-      --rule-g:   rgba(123,58,106,0.22);
+      --pink:     #D4607E;
+      --pink-l:   #F4B8CE;
+      --pink-ll:  #FAE0EB;
+      --lavender: #C2A8E0;
+      --peach:    #F5C4A8;
+      --text:     #2A1428;
+      --mid:      #7A5870;
+      --faint:    rgba(42,20,40,0.35);
+      --rule:     rgba(212,96,126,0.12);
+      --rule-g:   rgba(212,96,126,0.22);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -44,7 +49,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 1.25rem 4rem;
-      background: rgba(248,244,238,0.93);
+      background: rgba(253,240,245,0.93);
       backdrop-filter: blur(18px);
       border-bottom: 1px solid var(--rule);
     }
@@ -85,8 +90,14 @@
       text-align: center;
       padding: 10rem 2rem 8rem;
       background:
-        radial-gradient(ellipse at 50% 70%, rgba(201,169,110,0.1) 0%, transparent 62%),
-        linear-gradient(180deg, #F8F4EE 0%, #F1E6D8 100%);
+        radial-gradient(circle at 18% 42%, rgba(244,184,206,0.55) 0%, transparent 44%),
+        radial-gradient(circle at 78% 18%, rgba(194,168,224,0.48) 0%, transparent 40%),
+        radial-gradient(circle at 62% 78%, rgba(245,196,168,0.42) 0%, transparent 38%),
+        radial-gradient(circle at 38% 22%, rgba(250,224,235,0.6) 0%, transparent 36%),
+        radial-gradient(circle at 88% 65%, rgba(232,200,240,0.4) 0%, transparent 34%),
+        radial-gradient(circle at 8% 78%, rgba(244,184,206,0.35) 0%, transparent 30%),
+        radial-gradient(ellipse at 50% 55%, rgba(212,96,126,0.06) 0%, transparent 60%),
+        linear-gradient(135deg, #FDF0F5 0%, #F8E4F0 45%, #F2ECF9 100%);
       position: relative;
       overflow: hidden;
     }
@@ -98,7 +109,7 @@
       transform: translate(-50%, -50%);
       width: 620px;
       height: 620px;
-      border: 1px solid rgba(201,169,110,0.1);
+      border: 1px solid rgba(212,96,126,0.13);
       border-radius: 50%;
       pointer-events: none;
     }
@@ -108,7 +119,7 @@
       position: absolute;
       top: -190px; left: -190px;
       width: 1000px; height: 1000px;
-      border: 1px solid rgba(201,169,110,0.055);
+      border: 1px solid rgba(194,168,224,0.08);
       border-radius: 50%;
     }
 
@@ -117,7 +128,7 @@
       position: absolute;
       top: 85px; left: 85px;
       width: 450px; height: 450px;
-      border: 1px solid rgba(201,169,110,0.14);
+      border: 1px solid rgba(212,96,126,0.18);
       border-radius: 50%;
     }
 
@@ -125,7 +136,7 @@
       font-size: 0.62rem;
       letter-spacing: 0.42em;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--pink);
       margin-bottom: 3rem;
       display: flex;
       align-items: center;
@@ -138,7 +149,7 @@
     .hero-eyebrow::after {
       content: '◆';
       font-size: 0.42rem;
-      color: rgba(201,169,110,0.55);
+      color: rgba(212,96,126,0.5);
     }
 
     .hero-title {
@@ -166,7 +177,10 @@
       font-style: italic;
       font-weight: 700;
       font-size: clamp(6rem, 19vw, 16.5rem);
-      color: var(--gold);
+      background: linear-gradient(135deg, var(--pink) 0%, var(--lavender) 50%, var(--peach) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
       letter-spacing: 0.01em;
       line-height: 0.87;
     }
@@ -174,7 +188,7 @@
     .hero-rule {
       width: 70px;
       height: 1px;
-      background: rgba(201,169,110,0.45);
+      background: linear-gradient(90deg, rgba(212,96,126,0.2), rgba(194,168,224,0.5), rgba(212,96,126,0.2));
       margin: 0 auto 2rem;
       position: relative;
       z-index: 1;
@@ -218,7 +232,7 @@
     .scroll-line {
       width: 1px;
       height: 48px;
-      background: linear-gradient(to bottom, rgba(201,169,110,0.5), transparent);
+      background: linear-gradient(to bottom, rgba(212,96,126,0.5), rgba(194,168,224,0.3), transparent);
       animation: lineDown 2.4s ease-in-out infinite;
     }
 
@@ -226,6 +240,43 @@
       0%   { transform: scaleY(0); transform-origin: top; opacity: 1; }
       65%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
       100% { transform: scaleY(1); transform-origin: top; opacity: 0; }
+    }
+
+    /* ─── TIE-DYE BLOBS ───────────────────────── */
+    .tiedye-blob {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      filter: blur(40px);
+      mix-blend-mode: multiply;
+      opacity: 0.55;
+    }
+
+    .tdb-1 {
+      width: 340px; height: 340px;
+      top: 8%; left: -6%;
+      background: radial-gradient(circle at 40% 40%, #F4B8CE 0%, #E8C4E8 50%, transparent 80%);
+      animation: blobDrift 14s ease-in-out infinite;
+    }
+
+    .tdb-2 {
+      width: 280px; height: 280px;
+      top: 20%; right: -4%;
+      background: radial-gradient(circle at 55% 45%, #C2A8E0 0%, #D4C8F0 50%, transparent 80%);
+      animation: blobDrift 18s ease-in-out infinite reverse;
+    }
+
+    .tdb-3 {
+      width: 220px; height: 220px;
+      bottom: 15%; left: 30%;
+      background: radial-gradient(circle at 50% 50%, #F5C4A8 0%, #F4B8CE 50%, transparent 80%);
+      animation: blobDrift 22s ease-in-out infinite 4s;
+    }
+
+    @keyframes blobDrift {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33%       { transform: translate(18px, -22px) scale(1.05); }
+      66%       { transform: translate(-14px, 16px) scale(0.97); }
     }
 
     /* ─── SHARED ──────────────────────────────── */
@@ -240,7 +291,7 @@
       font-size: 0.62rem;
       letter-spacing: 0.36em;
       text-transform: uppercase;
-      color: var(--gold);
+      color: var(--pink);
       margin-bottom: 0.8rem;
       display: flex;
       align-items: center;
@@ -252,7 +303,7 @@
       display: block;
       width: 28px;
       height: 1px;
-      background: rgba(201,169,110,0.5);
+      background: linear-gradient(90deg, var(--pink-l), var(--lavender));
       flex-shrink: 0;
     }
 
@@ -277,7 +328,10 @@
 
     /* ─── THE LINEUP ──────────────────────────── */
     #lineup {
-      background: var(--ivory);
+      background:
+        radial-gradient(circle at 90% 10%, rgba(194,168,224,0.18) 0%, transparent 40%),
+        radial-gradient(circle at 5% 85%, rgba(244,184,206,0.2) 0%, transparent 38%),
+        var(--ivory);
       border-top: 1px solid var(--rule);
     }
 
@@ -306,7 +360,7 @@
       transition: background 0.2s;
     }
 
-    .lr:hover { background: rgba(201,169,110,0.025); }
+    .lr:hover { background: rgba(212,96,126,0.03); }
 
     .lr-meta {
       display: flex;
@@ -363,7 +417,7 @@
       content: '—';
       position: absolute;
       left: 0;
-      color: rgba(201,169,110,0.7);
+      color: var(--pink-l);
       font-size: 0.75rem;
       top: 0.22em;
     }
@@ -381,9 +435,9 @@
     }
 
     .chip-tbd {
-      background: rgba(201,169,110,0.08);
-      color: var(--gold);
-      border: 1px solid rgba(201,169,110,0.22);
+      background: rgba(212,96,126,0.07);
+      color: var(--pink);
+      border: 1px solid rgba(212,96,126,0.2);
     }
 
     .chip-opt {
@@ -458,7 +512,10 @@
 
     /* ─── GETTING HERE ────────────────────────── */
     #wayfinding {
-      background: var(--ivory-2);
+      background:
+        radial-gradient(circle at 15% 30%, rgba(244,184,206,0.22) 0%, transparent 40%),
+        radial-gradient(circle at 85% 70%, rgba(194,168,224,0.2) 0%, transparent 35%),
+        var(--ivory-2);
       border-top: 1px solid var(--rule);
     }
 
@@ -1078,6 +1135,9 @@
 <!-- ─── HERO ──────────────────────────────────────────── -->
 <section class="hero">
   <div class="hero-rings"></div>
+  <div class="tiedye-blob tdb-1"></div>
+  <div class="tiedye-blob tdb-2"></div>
+  <div class="tiedye-blob tdb-3"></div>
 
   <p class="hero-eyebrow">Donna's Bachelorette Weekend &nbsp;·&nbsp; 2026</p>
 
@@ -1117,12 +1177,13 @@
           <div class="lr-date">August 6</div>
         </div>
         <div class="lr-content">
-          <div class="lr-headline">Arrival &amp; Opening Night</div>
+          <div class="lr-headline">Arrival Day</div>
           <ul class="lr-acts">
-            <li class="lr-act">Plan to arrive by <strong>Thursday afternoon / evening</strong></li>
-            <li class="lr-act">Hotel check-in &amp; settle in</li>
-            <li class="lr-act">Dinner at the <strong>Ferry Building</strong> — San Francisco's iconic waterfront marketplace</li>
-            <li class="lr-act">Early night — shuttle to Napa departs in the morning! <span class="chip chip-tbd">Pickup time TBD</span></li>
+            <li class="lr-act"><strong>Afternoon / Evening</strong> — Arrivals into San Francisco</li>
+            <li class="lr-act">Coordinate carpools with the group</li>
+            <li class="lr-act"><strong>Check-in</strong> — The Westin <span class="chip chip-opt">Special rate from $179/night</span></li>
+            <li class="lr-act"><strong>Dinner</strong> — Ferry Building Marketplace, casual waterfront dinner + drinks</li>
+            <li class="lr-act"><strong>Late Night</strong> — Wind down &amp; relax (we have an early Napa departure!)</li>
           </ul>
         </div>
       </div>
@@ -1133,13 +1194,15 @@
           <div class="lr-date">August 7</div>
         </div>
         <div class="lr-content">
-          <div class="lr-headline">A Day in Napa Valley</div>
+          <div class="lr-headline">Napa Valley</div>
           <ul class="lr-acts">
-            <li class="lr-act">Shuttle departure from the hotel — no need to worry about transport <span class="chip chip-tbd">Pickup time TBD</span></li>
-            <li class="lr-act">Full day in wine country — sun, vines, and very good rosé</li>
-            <li class="lr-act">Winery visits &amp; tastings <span class="chip chip-tbd">Details TBD</span></li>
-            <li class="lr-act">Lunch among the vines <span class="chip chip-tbd">Details TBD</span></li>
-            <li class="lr-act">Shuttle back to San Francisco in the evening</li>
+            <li class="lr-act"><strong>Morning</strong> — Shuttle departs from hotel <span class="chip chip-tbd">Time TBD</span></li>
+            <li class="lr-act">Winery #1 — Tastings <span class="chip chip-tbd">TBD</span></li>
+            <li class="lr-act">Winery #2 — Tastings <span class="chip chip-tbd">TBD</span></li>
+            <li class="lr-act">Lunch Among the Vines <span class="chip chip-tbd">TBD</span></li>
+            <li class="lr-act">Wine &amp; Cheese Experience <span class="chip chip-tbd">TBD</span></li>
+            <li class="lr-act"><strong>Evening</strong> — Return to San Francisco</li>
+            <li class="lr-act">Dinner <span class="chip chip-tbd">TBD</span></li>
           </ul>
         </div>
       </div>
@@ -1150,11 +1213,11 @@
           <div class="lr-date">August 8</div>
         </div>
         <div class="lr-content">
-          <div class="lr-headline">Yoga, San Francisco &amp; Our Last Night</div>
+          <div class="lr-headline">Reset &amp; Celebrate</div>
           <ul class="lr-acts">
-            <li class="lr-act">Yoga class together <span class="chip chip-tbd">Time &amp; studio TBD</span></li>
-            <li class="lr-act">Activities around San Francisco <span class="chip chip-tbd">Details TBD</span></li>
-            <li class="lr-act">Dinner &amp; final night celebrations <span class="chip chip-tbd">Details TBD</span></li>
+            <li class="lr-act"><strong>Morning</strong> — Yoga or Guided Hike <span class="chip chip-tbd">TBD</span></li>
+            <li class="lr-act"><strong>Afternoon</strong> — Spa / Relaxation Activity <span class="chip chip-tbd">TBD</span></li>
+            <li class="lr-act"><strong>Evening</strong> — Final Dinner &amp; Drinks <span class="chip chip-tbd">TBD</span></li>
           </ul>
         </div>
       </div>
@@ -1165,11 +1228,12 @@
           <div class="lr-date">August 9</div>
         </div>
         <div class="lr-content">
-          <div class="lr-headline">Check Out &amp; Safe Travels</div>
+          <div class="lr-headline">Departures</div>
           <ul class="lr-acts">
-            <li class="lr-act">Hotel check-out &amp; goodbyes</li>
-            <li class="lr-act">Head to the airport — safe travels home! ✈️</li>
-            <li class="lr-act">Staying an extra day? Outside Lands Festival is happening in Golden Gate Park — one-day tickets available <span class="chip chip-opt">Optional</span></li>
+            <li class="lr-act"><strong>Morning</strong> — Optional Brunch ☕</li>
+            <li class="lr-act">Hotel departures</li>
+            <li class="lr-act">Head to the airport ✈️</li>
+            <li class="lr-act">Staying longer? Outside Lands Festival — Golden Gate Park <span class="chip chip-opt">Optional</span></li>
           </ul>
         </div>
       </div>
