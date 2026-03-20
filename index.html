@@ -1256,8 +1256,8 @@
         <p class="form-success-body">Thank you! See you in The Bay!</p>
       </div>
 
-      <!-- ── Custom form → posts to Google Forms via fetch (no-cors) ── -->
-      <form id="rsvp-form" onsubmit="(function(e){e.preventDefault();var url='https://docs.google.com/forms/d/e/1FAIpQLSf0SHfZHSL3DKYCyP_iS-NPOmvwWEhQSiJmhI6oo_zCSJCTlw/formResponse';fetch(url,{method:'POST',mode:'no-cors',body:new FormData(e.target)}).catch(function(){});document.getElementById('rsvp-form').style.display='none';document.getElementById('form-success').style.display='flex';})(event)">
+      <!-- ── Custom form → posts to Formspree ── -->
+      <form id="rsvp-form" onsubmit="(function(e){e.preventDefault();fetch('https://formspree.io/f/mzdjwpvq',{method:'POST',body:new FormData(e.target),headers:{'Accept':'application/json'}}).then(function(){document.getElementById('rsvp-form').style.display='none';document.getElementById('form-success').style.display='flex';}).catch(function(){document.getElementById('rsvp-form').style.display='none';document.getElementById('form-success').style.display='flex';});})(event)">
 
         <!-- ── About you ── -->
         <div class="gf-section">
@@ -1265,12 +1265,12 @@
 
           <div class="gf-field">
             <label class="gf-label required" for="f-name">Full name</label>
-            <input class="gf-input" type="text" id="f-name" name="entry.1445384248" required placeholder="Your full name">
+            <input class="gf-input" type="text" id="f-name" name="name" required placeholder="Your full name">
           </div>
 
           <div class="gf-field">
             <label class="gf-label required" for="f-email">Email address</label>
-            <input class="gf-input" type="email" id="f-email" name="entry.620363139" required placeholder="you@email.com">
+            <input class="gf-input" type="email" id="f-email" name="email" required placeholder="you@email.com">
           </div>
 
         </div>
@@ -1282,30 +1282,30 @@
           <div class="gf-field">
             <div class="gf-label required">Dietary restrictions &amp; allergies</div>
             <div class="gf-options">
-              <label class="gf-option"><input type="checkbox" name="entry.1130250275" value="Vegetarian"><span class="gf-option-label">Vegetarian</span></label>
-              <label class="gf-option"><input type="checkbox" name="entry.1130250275" value="Vegan"><span class="gf-option-label">Vegan</span></label>
-              <label class="gf-option"><input type="checkbox" name="entry.1130250275" value="Gluten-free"><span class="gf-option-label">Gluten-free</span></label>
-              <label class="gf-option"><input type="checkbox" name="entry.1130250275" value="Dairy-free"><span class="gf-option-label">Dairy-free</span></label>
-              <label class="gf-option"><input type="checkbox" name="entry.1130250275" value="Nut allergy (severe / EpiPen)"><span class="gf-option-label">Nut allergy (severe / EpiPen)</span></label>
-              <label class="gf-option"><input type="checkbox" name="entry.1130250275" value="Shellfish allergy"><span class="gf-option-label">Shellfish allergy</span></label>
-              <label class="gf-option"><input type="checkbox" name="entry.1130250275" value="None — I eat everything!"><span class="gf-option-label">None — I eat everything! 🎉</span></label>
+              <label class="gf-option"><input type="checkbox" name="dietary_restrictions" value="Vegetarian"><span class="gf-option-label">Vegetarian</span></label>
+              <label class="gf-option"><input type="checkbox" name="dietary_restrictions" value="Vegan"><span class="gf-option-label">Vegan</span></label>
+              <label class="gf-option"><input type="checkbox" name="dietary_restrictions" value="Gluten-free"><span class="gf-option-label">Gluten-free</span></label>
+              <label class="gf-option"><input type="checkbox" name="dietary_restrictions" value="Dairy-free"><span class="gf-option-label">Dairy-free</span></label>
+              <label class="gf-option"><input type="checkbox" name="dietary_restrictions" value="Nut allergy (severe / EpiPen)"><span class="gf-option-label">Nut allergy (severe / EpiPen)</span></label>
+              <label class="gf-option"><input type="checkbox" name="dietary_restrictions" value="Shellfish allergy"><span class="gf-option-label">Shellfish allergy</span></label>
+              <label class="gf-option"><input type="checkbox" name="dietary_restrictions" value="None — I eat everything!"><span class="gf-option-label">None — I eat everything! 🎉</span></label>
             </div>
           </div>
 
           <div class="gf-field">
             <label class="gf-label" for="f-diet-note">Anything else about your diet? <span class="gf-optional">(optional)</span></label>
-            <input class="gf-input" type="text" id="f-diet-note" name="entry.961592606" placeholder="Any other notes…">
+            <input class="gf-input" type="text" id="f-diet-note" name="diet_notes" placeholder="Any other notes…">
           </div>
 
           <div class="gf-field">
             <div class="gf-label required">Wine preferences for our Napa day (Friday)</div>
             <div class="gf-options">
-              <label class="gf-option"><input type="checkbox" name="entry.1668969926" value="Reds"><span class="gf-option-label">Reds 🍷</span></label>
-              <label class="gf-option"><input type="checkbox" name="entry.1668969926" value="Whites"><span class="gf-option-label">Whites 🥂</span></label>
-              <label class="gf-option"><input type="checkbox" name="entry.1668969926" value="Rosé"><span class="gf-option-label">Rosé 🌸</span></label>
-              <label class="gf-option"><input type="checkbox" name="entry.1668969926" value="Sparkling / Champagne"><span class="gf-option-label">Sparkling / Champagne ✨</span></label>
-              <label class="gf-option"><input type="checkbox" name="entry.1668969926" value="All of the above — I love it all!"><span class="gf-option-label">All of the above — I love it all!</span></label>
-              <label class="gf-option"><input type="checkbox" name="entry.1668969926" value="Non-drinker — but very excited to be in Napa!"><span class="gf-option-label">Non-drinker — but very excited to be here!</span></label>
+              <label class="gf-option"><input type="checkbox" name="wine_preferences" value="Reds"><span class="gf-option-label">Reds 🍷</span></label>
+              <label class="gf-option"><input type="checkbox" name="wine_preferences" value="Whites"><span class="gf-option-label">Whites 🥂</span></label>
+              <label class="gf-option"><input type="checkbox" name="wine_preferences" value="Rosé"><span class="gf-option-label">Rosé 🌸</span></label>
+              <label class="gf-option"><input type="checkbox" name="wine_preferences" value="Sparkling / Champagne"><span class="gf-option-label">Sparkling / Champagne ✨</span></label>
+              <label class="gf-option"><input type="checkbox" name="wine_preferences" value="All of the above — I love it all!"><span class="gf-option-label">All of the above — I love it all!</span></label>
+              <label class="gf-option"><input type="checkbox" name="wine_preferences" value="Non-drinker — but very excited to be in Napa!"><span class="gf-option-label">Non-drinker — but very excited to be here!</span></label>
             </div>
           </div>
         </div>
@@ -1317,24 +1317,24 @@
           <div class="gf-field">
             <div class="gf-label required">Hotel room preference</div>
             <div class="gf-options">
-              <label class="gf-option"><input type="radio" name="entry.473863199" value="King bed — one large bed (great for solo or sharing with a close friend)" required><span class="gf-option-label">King bed — one large bed, great for solo or sharing with a close friend</span></label>
-              <label class="gf-option"><input type="radio" name="entry.473863199" value="Double Queen — two queen beds (great for sharing with someone you don't know as well)"><span class="gf-option-label">Double Queen — two beds, great for sharing with someone new</span></label>
-              <label class="gf-option"><input type="radio" name="entry.473863199" value="No preference — assign me wherever!"><span class="gf-option-label">No preference — assign me wherever!</span></label>
+              <label class="gf-option"><input type="radio" name="hotel_room" value="King bed — one large bed (great for solo or sharing with a close friend)" required><span class="gf-option-label">King bed — one large bed, great for solo or sharing with a close friend</span></label>
+              <label class="gf-option"><input type="radio" name="hotel_room" value="Double Queen — two queen beds (great for sharing with someone you don't know as well)"><span class="gf-option-label">Double Queen — two beds, great for sharing with someone new</span></label>
+              <label class="gf-option"><input type="radio" name="hotel_room" value="No preference — assign me wherever!"><span class="gf-option-label">No preference — assign me wherever!</span></label>
             </div>
           </div>
 
           <div class="gf-field">
             <div class="gf-label required">Comfortable being matched with a roommate you may not know well?</div>
             <div class="gf-options">
-              <label class="gf-option"><input type="radio" name="entry.1091068811" value="Yes, no problem — match me with whoever needs a roommate" required><span class="gf-option-label">Yes, no problem — match me with whoever needs a roommate</span></label>
-              <label class="gf-option"><input type="radio" name="entry.1091068811" value="I'd prefer to room with someone I already know (name them in the next question)"><span class="gf-option-label">I'd prefer to room with someone I already know</span></label>
-              <label class="gf-option"><input type="radio" name="entry.1091068811" value="I'm interested in having my own room — I'll be in touch about solo pricing"><span class="gf-option-label">I'm interested in having my own room</span></label>
+              <label class="gf-option"><input type="radio" name="roommate_comfort" value="Yes, no problem — match me with whoever needs a roommate" required><span class="gf-option-label">Yes, no problem — match me with whoever needs a roommate</span></label>
+              <label class="gf-option"><input type="radio" name="roommate_comfort" value="I'd prefer to room with someone I already know (name them in the next question)"><span class="gf-option-label">I'd prefer to room with someone I already know</span></label>
+              <label class="gf-option"><input type="radio" name="roommate_comfort" value="I'm interested in having my own room — I'll be in touch about solo pricing"><span class="gf-option-label">I'm interested in having my own room</span></label>
             </div>
           </div>
 
           <div class="gf-field">
             <label class="gf-label" for="f-roommate">Roommate preference <span class="gf-optional">(optional)</span></label>
-            <input class="gf-input" type="text" id="f-roommate" name="entry.639538903" placeholder="Name someone you'd like to room with">
+            <input class="gf-input" type="text" id="f-roommate" name="roommate_preference" placeholder="Name someone you'd like to room with">
           </div>
         </div>
 
@@ -1345,42 +1345,42 @@
           <div class="gf-field">
             <div class="gf-label required">When do you plan to arrive on Thursday, August 6?</div>
             <div class="gf-options">
-              <label class="gf-option"><input type="radio" name="entry.629419634" value="Before noon (Thursday morning)" required><span class="gf-option-label">Before noon</span></label>
-              <label class="gf-option"><input type="radio" name="entry.629419634" value="12pm – 3pm (early afternoon)"><span class="gf-option-label">12pm – 3pm</span></label>
-              <label class="gf-option"><input type="radio" name="entry.629419634" value="3pm – 6pm (late afternoon)"><span class="gf-option-label">3pm – 6pm</span></label>
-              <label class="gf-option"><input type="radio" name="entry.629419634" value="6pm – 9pm (evening)"><span class="gf-option-label">6pm – 9pm</span></label>
-              <label class="gf-option"><input type="radio" name="entry.629419634" value="After 9pm (late night)"><span class="gf-option-label">After 9pm</span></label>
-              <label class="gf-option"><input type="radio" name="entry.629419634" value="Not arriving Thursday — I'll join the group Friday"><span class="gf-option-label">Not arriving Thursday — I'll join the group Friday</span></label>
-              <label class="gf-option"><input type="radio" name="entry.629419634" value="I haven't booked flights yet"><span class="gf-option-label">I haven't booked flights yet</span></label>
+              <label class="gf-option"><input type="radio" name="thursday_arrival" value="Before noon (Thursday morning)" required><span class="gf-option-label">Before noon</span></label>
+              <label class="gf-option"><input type="radio" name="thursday_arrival" value="12pm – 3pm (early afternoon)"><span class="gf-option-label">12pm – 3pm</span></label>
+              <label class="gf-option"><input type="radio" name="thursday_arrival" value="3pm – 6pm (late afternoon)"><span class="gf-option-label">3pm – 6pm</span></label>
+              <label class="gf-option"><input type="radio" name="thursday_arrival" value="6pm – 9pm (evening)"><span class="gf-option-label">6pm – 9pm</span></label>
+              <label class="gf-option"><input type="radio" name="thursday_arrival" value="After 9pm (late night)"><span class="gf-option-label">After 9pm</span></label>
+              <label class="gf-option"><input type="radio" name="thursday_arrival" value="Not arriving Thursday — I'll join the group Friday"><span class="gf-option-label">Not arriving Thursday — I'll join the group Friday</span></label>
+              <label class="gf-option"><input type="radio" name="thursday_arrival" value="I haven't booked flights yet"><span class="gf-option-label">I haven't booked flights yet</span></label>
             </div>
           </div>
 
           <div class="gf-field">
             <div class="gf-label required">Saturday morning: yoga, guided hike, or both?</div>
             <div class="gf-options">
-              <label class="gf-option"><input type="radio" name="entry.1303952414" value="Yoga on the vineyard" required><span class="gf-option-label">Yoga on the vineyard 🧘</span></label>
-              <label class="gf-option"><input type="radio" name="entry.1303952414" value="Guided hike"><span class="gf-option-label">Guided hike 🥾</span></label>
-              <label class="gf-option"><input type="radio" name="entry.1303952414" value="Both — sign me up for everything!"><span class="gf-option-label">Both — sign me up for everything!</span></label>
-              <label class="gf-option"><input type="radio" name="entry.1303952414" value="No thanks — I'll sleep in"><span class="gf-option-label">No thanks — I'll sleep in 😴</span></label>
+              <label class="gf-option"><input type="radio" name="saturday_morning" value="Yoga on the vineyard" required><span class="gf-option-label">Yoga on the vineyard 🧘</span></label>
+              <label class="gf-option"><input type="radio" name="saturday_morning" value="Guided hike"><span class="gf-option-label">Guided hike 🥾</span></label>
+              <label class="gf-option"><input type="radio" name="saturday_morning" value="Both — sign me up for everything!"><span class="gf-option-label">Both — sign me up for everything!</span></label>
+              <label class="gf-option"><input type="radio" name="saturday_morning" value="No thanks — I'll sleep in"><span class="gf-option-label">No thanks — I'll sleep in 😴</span></label>
             </div>
           </div>
 
           <div class="gf-field">
             <div class="gf-label required">Saturday afternoon: spa treatments?</div>
             <div class="gf-options">
-              <label class="gf-option"><input type="radio" name="entry.241368883" value="Yes, definitely" required><span class="gf-option-label">Yes, definitely ✨</span></label>
-              <label class="gf-option"><input type="radio" name="entry.241368883" value="Maybe — tell me more"><span class="gf-option-label">Maybe — tell me more</span></label>
-              <label class="gf-option"><input type="radio" name="entry.241368883" value="No thanks"><span class="gf-option-label">No thanks</span></label>
+              <label class="gf-option"><input type="radio" name="spa" value="Yes, definitely" required><span class="gf-option-label">Yes, definitely ✨</span></label>
+              <label class="gf-option"><input type="radio" name="spa" value="Maybe — tell me more"><span class="gf-option-label">Maybe — tell me more</span></label>
+              <label class="gf-option"><input type="radio" name="spa" value="No thanks"><span class="gf-option-label">No thanks</span></label>
             </div>
           </div>
 
           <div class="gf-field">
             <div class="gf-label required">Sunday: <a href="https://sfoutsidelands.com/news/daily-lineups-are-here/" target="_blank" rel="noopener">Outside Lands Festival</a> add-on — RÜFÜS DU SOL headlines!</div>
             <div class="gf-options">
-              <label class="gf-option"><input type="radio" name="entry.1408744162" value="Yes, I'm staying Sunday and want to go to Outside Lands" required><span class="gf-option-label">Yes — staying Sunday &amp; going to Outside Lands 🎶</span></label>
-              <label class="gf-option"><input type="radio" name="entry.1408744162" value="Yes, I'm staying Sunday but planning my own day"><span class="gf-option-label">Yes, staying Sunday but planning my own day</span></label>
-              <label class="gf-option"><input type="radio" name="entry.1408744162" value="No — I'll be flying home Sunday"><span class="gf-option-label">No — flying home Sunday</span></label>
-              <label class="gf-option"><input type="radio" name="entry.1408744162" value="Not sure yet"><span class="gf-option-label">Not sure yet</span></label>
+              <label class="gf-option"><input type="radio" name="sunday" value="Yes, I'm staying Sunday and want to go to Outside Lands" required><span class="gf-option-label">Yes — staying Sunday &amp; going to Outside Lands 🎶</span></label>
+              <label class="gf-option"><input type="radio" name="sunday" value="Yes, I'm staying Sunday but planning my own day"><span class="gf-option-label">Yes, staying Sunday but planning my own day</span></label>
+              <label class="gf-option"><input type="radio" name="sunday" value="No — I'll be flying home Sunday"><span class="gf-option-label">No — flying home Sunday</span></label>
+              <label class="gf-option"><input type="radio" name="sunday" value="Not sure yet"><span class="gf-option-label">Not sure yet</span></label>
             </div>
           </div>
         </div>
@@ -1392,19 +1392,19 @@
           <div class="gf-field">
             <div class="gf-label required">T-shirt / swag size</div>
             <div class="gf-options gf-sizes">
-              <label class="gf-option gf-option-pill"><input type="radio" name="entry.890059747" value="XS" required><span class="gf-option-label">XS</span></label>
-              <label class="gf-option gf-option-pill"><input type="radio" name="entry.890059747" value="S"><span class="gf-option-label">S</span></label>
-              <label class="gf-option gf-option-pill"><input type="radio" name="entry.890059747" value="M"><span class="gf-option-label">M</span></label>
-              <label class="gf-option gf-option-pill"><input type="radio" name="entry.890059747" value="L"><span class="gf-option-label">L</span></label>
-              <label class="gf-option gf-option-pill"><input type="radio" name="entry.890059747" value="XL"><span class="gf-option-label">XL</span></label>
-              <label class="gf-option gf-option-pill"><input type="radio" name="entry.890059747" value="XXL"><span class="gf-option-label">XXL</span></label>
+              <label class="gf-option gf-option-pill"><input type="radio" name="tshirt_size" value="XS" required><span class="gf-option-label">XS</span></label>
+              <label class="gf-option gf-option-pill"><input type="radio" name="tshirt_size" value="S"><span class="gf-option-label">S</span></label>
+              <label class="gf-option gf-option-pill"><input type="radio" name="tshirt_size" value="M"><span class="gf-option-label">M</span></label>
+              <label class="gf-option gf-option-pill"><input type="radio" name="tshirt_size" value="L"><span class="gf-option-label">L</span></label>
+              <label class="gf-option gf-option-pill"><input type="radio" name="tshirt_size" value="XL"><span class="gf-option-label">XL</span></label>
+              <label class="gf-option gf-option-pill"><input type="radio" name="tshirt_size" value="XXL"><span class="gf-option-label">XXL</span></label>
             </div>
           </div>
 
 
           <div class="gf-field">
             <label class="gf-label" for="f-other">Anything else we should know? <span class="gf-optional">(optional)</span></label>
-            <textarea class="gf-input gf-textarea" id="f-other" name="entry.609554023" rows="3" placeholder="Questions, requests, concerns…"></textarea>
+            <textarea class="gf-input gf-textarea" id="f-other" name="anything_else" rows="3" placeholder="Questions, requests, concerns…"></textarea>
           </div>
         </div>
 
