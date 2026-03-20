@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Napa Before Nuptials · Bachelorette 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ivory:    #F5EDD6;
+      --ivory-2:  #EDE2BC;
+      --dark:     #1A0F26;
+      --dark-2:   #231540;
+      --gold:     #E09418;
+      --gold-l:   #F0B030;
+      --terra:    #7B3A6A;
+      --sage:     #3E8B6A;
+      --text:     #1A0F26;
+      --mid:      #6E6878;
+      --faint:    rgba(26,15,38,0.38);
+      --rule:     rgba(26,15,38,0.09);
+      --rule-g:   rgba(123,58,106,0.22);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--ivory);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ─── NAV ─────────────────────────────────── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 4rem;
+      background: rgba(248,244,238,0.93);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: var(--text);
+      letter-spacing: 0.02em;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.67rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+      transition: color 0.22s;
+    }
+
+    .nav-links a:hover { color: var(--text); }
+
+    /* ─── HERO ────────────────────────────────── */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 10rem 2rem 8rem;
+      background:
+        radial-gradient(ellipse at 50% 70%, rgba(201,169,110,0.1) 0%, transparent 62%),
+        linear-gradient(180deg, #F8F4EE 0%, #F1E6D8 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* concentric ring ornament — subtle festival sun */
+    .hero-rings {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 620px;
+      height: 620px;
+      border: 1px solid rgba(201,169,110,0.1);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .hero-rings::before {
+      content: '';
+      position: absolute;
+      top: -190px; left: -190px;
+      width: 1000px; height: 1000px;
+      border: 1px solid rgba(201,169,110,0.055);
+      border-radius: 50%;
+    }
+
+    .hero-rings::after {
+      content: '';
+      position: absolute;
+      top: 85px; left: 85px;
+      width: 450px; height: 450px;
+      border: 1px solid rgba(201,169,110,0.14);
+      border-radius: 50%;
+    }
+
+    .hero-eyebrow {
+      font-size: 0.62rem;
+      letter-spacing: 0.42em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-eyebrow::before,
+    .hero-eyebrow::after {
+      content: '◆';
+      font-size: 0.42rem;
+      color: rgba(201,169,110,0.55);
+    }
+
+    .hero-title {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      line-height: 1;
+      margin-bottom: 2.5rem;
+    }
+
+    .ht-top {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 300;
+      font-size: clamp(1.8rem, 4.5vw, 4rem);
+      color: var(--text);
+      letter-spacing: 0.08em;
+      margin-bottom: -0.04em;
+    }
+
+    .ht-bot {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 700;
+      font-size: clamp(6rem, 19vw, 16.5rem);
+      color: var(--gold);
+      letter-spacing: 0.01em;
+      line-height: 0.87;
+    }
+
+    .hero-rule {
+      width: 70px;
+      height: 1px;
+      background: rgba(201,169,110,0.45);
+      margin: 0 auto 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1rem, 1.8vw, 1.3rem);
+      color: var(--mid);
+      margin-bottom: 0.7rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-date {
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--faint);
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-scroll {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.6rem;
+      color: var(--faint);
+      font-size: 0.58rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 48px;
+      background: linear-gradient(to bottom, rgba(201,169,110,0.5), transparent);
+      animation: lineDown 2.4s ease-in-out infinite;
+    }
+
+    @keyframes lineDown {
+      0%   { transform: scaleY(0); transform-origin: top; opacity: 1; }
+      65%  { transform: scaleY(1); transform-origin: top; opacity: 1; }
+      100% { transform: scaleY(1); transform-origin: top; opacity: 0; }
+    }
+
+    /* ─── SHARED ──────────────────────────────── */
+    section { padding: 7rem 2rem; }
+
+    .container {
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .s-eyebrow {
+      font-size: 0.62rem;
+      letter-spacing: 0.36em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .s-eyebrow::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: rgba(201,169,110,0.5);
+      flex-shrink: 0;
+    }
+
+    .s-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 600;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      line-height: 1.1;
+      color: var(--text);
+      margin-bottom: 1rem;
+    }
+
+    .s-desc {
+      font-size: 0.91rem;
+      color: var(--mid);
+      line-height: 1.88;
+      max-width: 520px;
+      margin-bottom: 3.5rem;
+      font-weight: 300;
+    }
+
+    /* ─── THE LINEUP ──────────────────────────── */
+    #lineup {
+      background: var(--ivory);
+      border-top: 1px solid var(--rule);
+    }
+
+    .lineup-header {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .lh-col {
+      font-size: 0.6rem;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      color: var(--faint);
+    }
+
+    .lineup-body { border-top: 1px solid var(--rule); }
+
+    .lr {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 3rem;
+      padding: 2.75rem 0;
+      border-bottom: 1px solid var(--rule);
+      transition: background 0.2s;
+    }
+
+    .lr:hover { background: rgba(201,169,110,0.025); }
+
+    .lr-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+      padding-top: 0.2rem;
+    }
+
+    .lr-day {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.7rem;
+      font-weight: 400;
+      color: var(--text);
+      line-height: 1;
+    }
+
+    .lr-date {
+      font-size: 0.6rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--faint);
+    }
+
+    .lr-content {}
+
+    .lr-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 600;
+      font-size: 1.6rem;
+      color: var(--text);
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .lr-acts {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .lr-act {
+      font-size: 0.88rem;
+      color: var(--mid);
+      line-height: 1.72;
+      padding-left: 1.3rem;
+      position: relative;
+      font-weight: 300;
+    }
+
+    .lr-act::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: rgba(201,169,110,0.7);
+      font-size: 0.75rem;
+      top: 0.22em;
+    }
+
+    .chip {
+      display: inline-block;
+      font-size: 0.55rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.14rem 0.52rem;
+      margin-left: 0.4rem;
+      vertical-align: middle;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+    }
+
+    .chip-tbd {
+      background: rgba(201,169,110,0.08);
+      color: var(--gold);
+      border: 1px solid rgba(201,169,110,0.22);
+    }
+
+    .chip-opt {
+      background: rgba(138,155,122,0.1);
+      color: var(--sage);
+      border: 1px solid rgba(138,155,122,0.22);
+    }
+
+    /* ─── THE HOTEL (dark) ────────────────────── */
+    #hotel {
+      background: var(--dark);
+      border-top: none;
+    }
+
+    #hotel .s-eyebrow        { color: var(--gold); }
+    #hotel .s-eyebrow::before { background: rgba(201,169,110,0.4); }
+    #hotel .s-title          { color: #F5EDD5; }
+    #hotel .s-desc           { color: rgba(245,237,213,0.42); }
+
+    .hotel-card {
+      border: 1px solid var(--rule-g);
+      padding: 3rem;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      gap: 3rem;
+      align-items: flex-start;
+    }
+
+    .hotel-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold) 50%, transparent);
+    }
+
+    .hotel-glyph {
+      font-size: 2.8rem;
+      flex-shrink: 0;
+      padding-top: 0.2rem;
+    }
+
+    .hotel-text h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 2rem;
+      color: #F5EDD5;
+      margin-bottom: 0.7rem;
+      font-weight: 400;
+    }
+
+    .hotel-text p {
+      font-size: 0.9rem;
+      color: rgba(245,237,213,0.48);
+      line-height: 1.85;
+      margin-bottom: 0.7rem;
+      font-weight: 300;
+    }
+
+    .soon-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.62rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1px solid var(--rule-g);
+      padding: 0.35rem 0.9rem;
+    }
+
+    /* ─── GETTING HERE ────────────────────────── */
+    #wayfinding {
+      background: var(--ivory-2);
+      border-top: 1px solid var(--rule);
+    }
+
+    .airports-row {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--rule);
+      margin-bottom: 2px;
+    }
+
+    .ap-col {
+      padding: 2.5rem;
+      border-right: 1px solid var(--rule);
+      transition: background 0.22s;
+    }
+
+    .ap-col:last-child { border-right: none; }
+    .ap-col:hover { background: rgba(201,169,110,0.04); }
+
+    .ap-code {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 4.2rem;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--text);
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.05em;
+    }
+
+    .ap-name {
+      font-size: 0.68rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin-bottom: 0.85rem;
+      font-weight: 500;
+    }
+
+    .ap-detail {
+      font-size: 0.85rem;
+      color: var(--mid);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    .ap-rec {
+      display: inline-block;
+      margin-top: 0.85rem;
+      font-size: 0.58rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ivory);
+      background: var(--sage);
+      padding: 0.22rem 0.7rem;
+    }
+
+    .transport-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--rule);
+      margin-top: 3rem;
+    }
+
+    .tr-col {
+      padding: 1.75rem 2rem;
+      border-right: 1px solid var(--rule);
+    }
+
+    .tr-col:last-child { border-right: none; }
+
+    .tr-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      color: var(--text);
+      margin-bottom: 0.45rem;
+    }
+
+    .tr-text {
+      font-size: 0.83rem;
+      color: var(--mid);
+      line-height: 1.68;
+      font-weight: 300;
+    }
+
+    /* ─── OUTSIDE LANDS (dark) ────────────────── */
+    #outsidelands {
+      background: var(--dark-2);
+      border-top: none;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #outsidelands::before {
+      content: '';
+      position: absolute;
+      top: -40%; left: -20%;
+      width: 140%; height: 180%;
+      background: radial-gradient(ellipse at 45% 55%, rgba(201,169,110,0.055) 0%, transparent 58%);
+      pointer-events: none;
+    }
+
+    #outsidelands .s-eyebrow         { color: var(--gold); }
+    #outsidelands .s-eyebrow::before  { background: rgba(201,169,110,0.4); }
+    #outsidelands .s-title            { color: #F5EDD5; }
+    #outsidelands .s-desc             { color: rgba(245,237,213,0.42); }
+
+    .ol-card {
+      position: relative;
+      z-index: 1;
+      border: 1px solid var(--rule-g);
+      display: grid;
+      grid-template-columns: 1fr 170px;
+    }
+
+    .ol-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold) 50%, transparent);
+    }
+
+    .ol-main { padding: 3rem; }
+
+    .ol-eyebrow {
+      font-size: 0.6rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(201,169,110,0.55);
+      margin-bottom: 0.7rem;
+    }
+
+    .ol-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-weight: 600;
+      font-size: clamp(2rem, 4.5vw, 3.2rem);
+      color: #F5EDD5;
+      line-height: 1;
+      margin-bottom: 0.4rem;
+    }
+
+    .ol-loc {
+      font-size: 0.67rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(245,237,213,0.28);
+      margin-bottom: 1.6rem;
+    }
+
+    .ol-body {
+      font-size: 0.9rem;
+      color: rgba(245,237,213,0.52);
+      line-height: 1.88;
+      max-width: 540px;
+      margin-bottom: 2rem;
+      font-weight: 300;
+    }
+
+    .ol-actions { display: flex; gap: 0.85rem; flex-wrap: wrap; }
+
+    .ol-note {
+      margin-top: 1.5rem;
+      font-size: 0.75rem;
+      font-style: italic;
+      color: rgba(245,237,213,0.22);
+    }
+
+    /* ─── BUTTONS ─────────────────────────────── */
+    .btn {
+      display: inline-block;
+      padding: 0.72rem 1.9rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.24s;
+      cursor: pointer;
+      border: none;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 400;
+    }
+
+    .btn-gold {
+      background: var(--gold);
+      color: var(--dark);
+    }
+
+    .btn-gold:hover {
+      background: var(--gold-l);
+      transform: translateY(-1px);
+      box-shadow: 0 5px 18px rgba(201,169,110,0.3);
+    }
+
+    .btn-ghost-light {
+      background: transparent;
+      border: 1px solid rgba(245,237,213,0.22);
+      color: rgba(245,237,213,0.72);
+    }
+
+    .btn-ghost-light:hover {
+      border-color: rgba(245,237,213,0.45);
+      background: rgba(245,237,213,0.05);
+    }
+
+    .btn-ghost-dark {
+      background: transparent;
+      border: 1px solid rgba(26,21,16,0.18);
+      color: var(--text);
+    }
+
+    .btn-ghost-dark:hover {
+      border-color: rgba(26,21,16,0.35);
+      background: rgba(26,21,16,0.03);
+    }
+
+    /* ol stub */
+    .ol-stub {
+      border-left: 1px dashed var(--rule-g);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+
+    .stub-v {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-size: 0.6rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(201,169,110,0.3);
+    }
+
+    .stub-date {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.95rem;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      line-height: 1.4;
+    }
+
+    .stub-icon { font-size: 1.3rem; opacity: 0.35; }
+
+    /* ─── WHAT TO KNOW ────────────────────────── */
+    #tips {
+      background: var(--ivory);
+      border-top: 1px solid var(--rule);
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--rule);
+    }
+
+    .tip {
+      padding: 2.25rem;
+      border-right: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule);
+      transition: background 0.22s;
+    }
+
+    .tip:hover { background: rgba(201,169,110,0.03); }
+
+    /* remove right border on last of each row */
+    .tip:nth-child(3n) { border-right: none; }
+
+    /* remove bottom border on last row */
+    .tip:nth-last-child(-n+3) { border-bottom: none; }
+
+    .tip-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 300;
+      color: rgba(201,169,110,0.22);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .tip-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.2rem;
+      color: var(--text);
+      margin-bottom: 0.55rem;
+      font-weight: 600;
+    }
+
+    .tip-text {
+      font-size: 0.84rem;
+      color: var(--mid);
+      line-height: 1.72;
+      font-weight: 300;
+    }
+
+    /* ─── RSVP ───────────────────────────────── */
+    #rsvp {
+      background: var(--ivory-2);
+      border-top: 1px solid var(--rule);
+    }
+
+    .form-shell {
+      max-width: 680px;
+      margin: 3rem auto 0;
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      background: #fff;
+      overflow: hidden;
+      padding: 2.5rem 2.5rem 2rem;
+    }
+
+    /* ─── CUSTOM FORM FIELDS ──────────────── */
+    .gf-section {
+      padding-bottom: 2rem;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid var(--rule);
+    }
+    .gf-section:last-of-type { border-bottom: none; margin-bottom: 0; }
+
+    .gf-section-label {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.68rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .gf-field { margin-bottom: 1.4rem; }
+    .gf-field:last-child { margin-bottom: 0; }
+
+    .gf-label, div.gf-label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: var(--text);
+      margin-bottom: 0.55rem;
+      line-height: 1.45;
+    }
+    .gf-label.required::after, div.gf-label.required::after {
+      content: ' *';
+      color: var(--terra);
+    }
+    .gf-label a { color: var(--gold); text-decoration: none; }
+    .gf-label a:hover { text-decoration: underline; }
+
+    .gf-optional {
+      font-size: 0.77rem;
+      font-weight: 300;
+      color: var(--mid);
+    }
+
+    .gf-input {
+      width: 100%;
+      padding: 0.65rem 0.9rem;
+      border: 1px solid rgba(26,21,16,0.18);
+      border-radius: 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      color: var(--text);
+      background: #faf8f5;
+      transition: border-color 0.18s, box-shadow 0.18s;
+      appearance: none;
+    }
+    .gf-input:focus {
+      outline: none;
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(194,136,28,0.13);
+      background: #fff;
+    }
+    .gf-textarea { resize: vertical; min-height: 86px; }
+
+    .gf-options {
+      display: flex;
+      flex-direction: column;
+      gap: 0.42rem;
+    }
+    .gf-sizes {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 0.45rem;
+    }
+
+    .gf-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      cursor: pointer;
+      padding: 0.55rem 0.85rem;
+      border-radius: 8px;
+      border: 1px solid rgba(26,21,16,0.12);
+      transition: background 0.14s, border-color 0.14s;
+      user-select: none;
+    }
+    .gf-option:hover {
+      background: var(--ivory-2);
+      border-color: var(--gold-l);
+    }
+    .gf-option input {
+      margin-top: 0.14rem;
+      accent-color: var(--gold);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+    .gf-option-label {
+      font-size: 0.875rem;
+      line-height: 1.45;
+      color: var(--text);
+    }
+
+    .gf-option-pill {
+      padding: 0.48rem 1rem;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      min-width: 3.2rem;
+      gap: 0;
+    }
+    .gf-option-pill input { display: none; }
+    .gf-option-pill .gf-option-label {
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-align: center;
+    }
+    .gf-option-pill:has(input:checked) {
+      background: var(--gold);
+      border-color: var(--gold);
+    }
+    .gf-option-pill:has(input:checked) .gf-option-label { color: #fff; }
+
+    .gf-submit-row { padding-top: 1.5rem; text-align: center; }
+    .gf-submit { padding: 0.9rem 3rem; font-size: 0.92rem; letter-spacing: 0.05em; }
+
+    .form-success {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 4.5rem 2rem;
+      gap: 1rem;
+    }
+    .form-success-icon { font-size: 2.4rem; color: var(--gold); }
+    .form-success-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--text);
+    }
+    .form-success-body {
+      font-size: 0.93rem;
+      color: var(--mid);
+      max-width: 380px;
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    /* ─── HOTEL DETAIL ROWS ───────────────────── */
+    .hotel-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+      margin: 1.2rem 0 1.5rem;
+    }
+
+    .hotel-meta-row {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      font-size: 0.86rem;
+    }
+
+    .hm-label {
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(245,237,213,0.3);
+      flex-shrink: 0;
+      width: 72px;
+    }
+
+    .hm-value {
+      color: rgba(245,237,213,0.65);
+      font-weight: 300;
+    }
+
+    .hm-value a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    .hm-value a:hover { text-decoration: underline; }
+
+    /* ─── GET IN TOUCH ────────────────────────── */
+    #contact {
+      background: var(--terra);
+      text-align: center;
+      border-top: none;
+    }
+
+    #contact .s-eyebrow         { color: rgba(248,244,238,0.55); justify-content: center; }
+    #contact .s-eyebrow::before { background: rgba(248,244,238,0.35); }
+    #contact .s-title           { color: var(--ivory); }
+
+    .contact-body {
+      font-size: 0.9rem;
+      color: rgba(248,244,238,0.65);
+      line-height: 1.88;
+      max-width: 460px;
+      margin: 0 auto 2rem;
+      font-weight: 300;
+    }
+
+    /* replace placeholder with your real email */
+    .contact-email {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: clamp(1.3rem, 3vw, 2rem);
+      color: var(--ivory);
+      text-decoration: none;
+      margin-bottom: 2rem;
+      transition: opacity 0.22s;
+    }
+
+    .contact-email:hover { opacity: 0.65; }
+
+    .btn-ivory {
+      background: var(--ivory);
+      color: var(--terra);
+    }
+
+    .btn-ivory:hover {
+      background: #fff;
+      transform: translateY(-1px);
+    }
+
+    /* ─── FOOTER ──────────────────────────────── */
+    footer {
+      background: var(--dark);
+      color: rgba(245,237,213,0.18);
+      text-align: center;
+      padding: 1.75rem;
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+    }
+
+    footer em {
+      color: rgba(201,169,110,0.35);
+      font-style: normal;
+    }
+
+    /* ─── RESPONSIVE ──────────────────────────── */
+    @media (max-width: 960px) {
+      .form-shell { padding: 1.75rem 1.25rem 1.5rem; margin-top: 2rem; }
+    }
+
+    @media (max-width: 860px) {
+      .ol-card     { grid-template-columns: 1fr; }
+      .ol-stub     { border-left: none; border-top: 1px dashed var(--rule-g); flex-direction: row; padding: 1.5rem 2rem; }
+      .stub-v      { writing-mode: horizontal-tb; }
+      .airports-row { grid-template-columns: 1fr; }
+      .ap-col      { border-right: none; border-bottom: 1px solid var(--rule); }
+      .ap-col:last-child { border-bottom: none; }
+      .transport-row { grid-template-columns: repeat(2, 1fr); }
+      .tr-col:nth-child(2n) { border-right: none; }
+      .tips-grid   { grid-template-columns: 1fr 1fr; }
+      .tip:nth-child(3n)      { border-right: 1px solid var(--rule); }
+      .tip:nth-child(2n)      { border-right: none; }
+      .tip:nth-last-child(-n+3) { border-bottom: 1px solid var(--rule); }
+      .tip:nth-last-child(-n+2) { border-bottom: none; }
+    }
+
+    @media (max-width: 720px) {
+      nav { padding: 1rem 1.5rem; }
+      .nav-links { display: none; }
+
+      .lr { grid-template-columns: 1fr; gap: 0.6rem; padding: 2rem 0; }
+      .lineup-header { display: none; }
+      .hotel-card { flex-direction: column; gap: 1.5rem; }
+      .transport-row { grid-template-columns: 1fr; }
+      .tr-col { border-right: none; border-bottom: 1px solid var(--rule); }
+      .tr-col:last-child { border-bottom: none; }
+      .tips-grid { grid-template-columns: 1fr; }
+      .tip { border-right: none !important; }
+      .tip:not(:last-child) { border-bottom: 1px solid var(--rule); }
+      .tip:last-child { border-bottom: none; }
+
+      section { padding: 5rem 1.5rem; }
+      .form-shell { padding: 1.25rem 1rem 1.25rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ─── NAV ───────────────────────────────────────────── -->
+<nav>
+  <div class="nav-logo">Napa Before Nuptials</div>
+  <ul class="nav-links">
+    <li><a href="#lineup">The Lineup</a></li>
+    <li><a href="#rsvp">RSVP</a></li>
+    <li><a href="#hotel">Hotel</a></li>
+    <li><a href="#wayfinding">Getting Here</a></li>
+    <li><a href="#outsidelands">Outside Lands</a></li>
+    <li><a href="#tips">Good to Know</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ─── HERO ──────────────────────────────────────────── -->
+<section class="hero">
+  <div class="hero-rings"></div>
+
+  <p class="hero-eyebrow">Donna's Bachelorette Weekend &nbsp;·&nbsp; 2026</p>
+
+  <div class="hero-title">
+    <span class="ht-top">Napa Before</span>
+    <span class="ht-bot">Nuptials</span>
+  </div>
+
+  <div class="hero-rule"></div>
+
+  <p class="hero-sub">A San Francisco Weekend</p>
+  <p class="hero-date">August 6 — 9, 2026 &nbsp;·&nbsp; San Francisco, California</p>
+
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- ─── THE LINEUP ────────────────────────────────────── -->
+<section id="lineup">
+  <div class="container">
+    <div class="s-eyebrow">The Schedule</div>
+    <h2 class="s-title">The Lineup</h2>
+    <p class="s-desc">Four days, one unforgettable bachelorette. Details are still being finalized — check back soon for updates.</p>
+
+    <div class="lineup-header">
+      <span class="lh-col">Day</span>
+      <span class="lh-col">What's On</span>
+    </div>
+
+    <div class="lineup-body">
+
+      <div class="lr">
+        <div class="lr-meta">
+          <div class="lr-day">Thursday</div>
+          <div class="lr-date">August 6</div>
+        </div>
+        <div class="lr-content">
+          <div class="lr-headline">Arrival &amp; Opening Night</div>
+          <ul class="lr-acts">
+            <li class="lr-act">Plan to arrive by <strong>Thursday afternoon / evening</strong></li>
+            <li class="lr-act">Hotel check-in &amp; settle in</li>
+            <li class="lr-act">Dinner at the <strong>Ferry Building</strong> — San Francisco's iconic waterfront marketplace</li>
+            <li class="lr-act">Early night — shuttle to Napa departs in the morning! <span class="chip chip-tbd">Pickup time TBD</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lr">
+        <div class="lr-meta">
+          <div class="lr-day">Friday</div>
+          <div class="lr-date">August 7</div>
+        </div>
+        <div class="lr-content">
+          <div class="lr-headline">A Day in Napa Valley</div>
+          <ul class="lr-acts">
+            <li class="lr-act">Shuttle departure from the hotel — no need to worry about transport <span class="chip chip-tbd">Pickup time TBD</span></li>
+            <li class="lr-act">Full day in wine country — sun, vines, and very good rosé</li>
+            <li class="lr-act">Winery visits &amp; tastings <span class="chip chip-tbd">Details TBD</span></li>
+            <li class="lr-act">Lunch among the vines <span class="chip chip-tbd">Details TBD</span></li>
+            <li class="lr-act">Shuttle back to San Francisco in the evening</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lr">
+        <div class="lr-meta">
+          <div class="lr-day">Saturday</div>
+          <div class="lr-date">August 8</div>
+        </div>
+        <div class="lr-content">
+          <div class="lr-headline">Yoga, San Francisco &amp; Our Last Night</div>
+          <ul class="lr-acts">
+            <li class="lr-act">Yoga class together <span class="chip chip-tbd">Time &amp; studio TBD</span></li>
+            <li class="lr-act">Activities around San Francisco <span class="chip chip-tbd">Details TBD</span></li>
+            <li class="lr-act">Dinner &amp; final night celebrations <span class="chip chip-tbd">Details TBD</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="lr">
+        <div class="lr-meta">
+          <div class="lr-day">Sunday</div>
+          <div class="lr-date">August 9</div>
+        </div>
+        <div class="lr-content">
+          <div class="lr-headline">Check Out &amp; Safe Travels</div>
+          <ul class="lr-acts">
+            <li class="lr-act">Hotel check-out &amp; goodbyes</li>
+            <li class="lr-act">Head to the airport — safe travels home! ✈️</li>
+            <li class="lr-act">Staying an extra day? Outside Lands Festival is happening in Golden Gate Park — one-day tickets available <span class="chip chip-opt">Optional</span></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── RSVP ──────────────────────────────────────────── -->
+<section id="rsvp">
+  <div class="container">
+    <div class="s-eyebrow">Action Required</div>
+    <h2 class="s-title">Tell Us About You</h2>
+    <p class="s-desc">Fill out the form below so we can plan every detail around the group. Takes two minutes!</p>
+
+    <div class="form-shell">
+
+      <!-- ── Success state ── -->
+      <div class="form-success" id="form-success">
+        <div class="form-success-icon">✦</div>
+        <h3 class="form-success-title">You're in!</h3>
+        <p class="form-success-body">Thank you! We can't wait to celebrate with you and Donna in August. See you in Napa! 🥂</p>
+      </div>
+
+      <!-- ── Custom form → posts to Google Forms in background ── -->
+      <form id="rsvp-form"
+        action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSf0SHfZHSL3DKYCyP_iS-NPOmvwWEhQSiJmhI6oo_zCSJCTlw/formResponse"
+        method="POST"
+        target="hidden_iframe"
+        onsubmit="setTimeout(function(){document.getElementById('rsvp-form').style.display='none';var s=document.getElementById('form-success');s.style.display='flex';},600)">
+
+        <!-- ── About you ── -->
+        <div class="gf-section">
+          <div class="gf-section-label">About you</div>
+
+          <div class="gf-field">
+            <label class="gf-label required" for="f-name">Full name</label>
+            <input class="gf-input" type="text" id="f-name" name="entry.1445384248" required placeholder="Your full name">
+          </div>
+
+          <div class="gf-field">
+            <label class="gf-label required" for="f-email">Email address</label>
+            <input class="gf-input" type="email" id="f-email" name="entry.620363139" required placeholder="you@email.com">
+          </div>
+
+          <div class="gf-field">
+            <label class="gf-label" for="f-phone">Phone number <span class="gf-optional">(optional)</span></label>
+            <input class="gf-input" type="tel" id="f-phone" name="entry.1019993841" placeholder="+1 (555) 000-0000">
+          </div>
+        </div>
+
+        <!-- ── Food & drink ── -->
+        <div class="gf-section">
+          <div class="gf-section-label">Food &amp; drink</div>
+
+          <div class="gf-field">
+            <div class="gf-label required">Dietary restrictions &amp; allergies</div>
+            <div class="gf-options">
+              <label class="gf-option"><input type="checkbox" name="entry.1130250275" value="Vegetarian"><span class="gf-option-label">Vegetarian</span></label>
+              <label class="gf-option"><input type="checkbox" name="entry.1130250275" value="Vegan"><span class="gf-option-label">Vegan</span></label>
+              <label class="gf-option"><input type="checkbox" name="entry.1130250275" value="Gluten-free"><span class="gf-option-label">Gluten-free</span></label>
+              <label class="gf-option"><input type="checkbox" name="entry.1130250275" value="Dairy-free"><span class="gf-option-label">Dairy-free</span></label>
+              <label class="gf-option"><input type="checkbox" name="entry.1130250275" value="Nut allergy (severe / EpiPen)"><span class="gf-option-label">Nut allergy (severe / EpiPen)</span></label>
+              <label class="gf-option"><input type="checkbox" name="entry.1130250275" value="Shellfish allergy"><span class="gf-option-label">Shellfish allergy</span></label>
+              <label class="gf-option"><input type="checkbox" name="entry.1130250275" value="None — I eat everything!"><span class="gf-option-label">None — I eat everything! 🎉</span></label>
+            </div>
+          </div>
+
+          <div class="gf-field">
+            <label class="gf-label" for="f-diet-note">Anything else about your diet? <span class="gf-optional">(optional)</span></label>
+            <input class="gf-input" type="text" id="f-diet-note" name="entry.961592606" placeholder="Any other notes…">
+          </div>
+
+          <div class="gf-field">
+            <div class="gf-label required">Wine preferences for our Napa day (Friday)</div>
+            <div class="gf-options">
+              <label class="gf-option"><input type="checkbox" name="entry.1668969926" value="Reds"><span class="gf-option-label">Reds 🍷</span></label>
+              <label class="gf-option"><input type="checkbox" name="entry.1668969926" value="Whites"><span class="gf-option-label">Whites 🥂</span></label>
+              <label class="gf-option"><input type="checkbox" name="entry.1668969926" value="Rosé"><span class="gf-option-label">Rosé 🌸</span></label>
+              <label class="gf-option"><input type="checkbox" name="entry.1668969926" value="Sparkling / Champagne"><span class="gf-option-label">Sparkling / Champagne ✨</span></label>
+              <label class="gf-option"><input type="checkbox" name="entry.1668969926" value="All of the above — I love it all!"><span class="gf-option-label">All of the above — I love it all!</span></label>
+              <label class="gf-option"><input type="checkbox" name="entry.1668969926" value="Non-drinker — but very excited to be in Napa!"><span class="gf-option-label">Non-drinker — but very excited to be here!</span></label>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Hotel & rooming ── -->
+        <div class="gf-section">
+          <div class="gf-section-label">Hotel &amp; rooming</div>
+
+          <div class="gf-field">
+            <div class="gf-label required">Hotel room preference</div>
+            <div class="gf-options">
+              <label class="gf-option"><input type="radio" name="entry.473863199" value="King bed — one large bed (great for solo or sharing with a close friend)" required><span class="gf-option-label">King bed — one large bed, great for solo or sharing with a close friend</span></label>
+              <label class="gf-option"><input type="radio" name="entry.473863199" value="Double Queen — two queen beds (great for sharing with someone you don't know as well)"><span class="gf-option-label">Double Queen — two beds, great for sharing with someone new</span></label>
+              <label class="gf-option"><input type="radio" name="entry.473863199" value="No preference — assign me wherever!"><span class="gf-option-label">No preference — assign me wherever!</span></label>
+            </div>
+          </div>
+
+          <div class="gf-field">
+            <div class="gf-label required">Comfortable being matched with a roommate you may not know well?</div>
+            <div class="gf-options">
+              <label class="gf-option"><input type="radio" name="entry.1091068811" value="Yes, no problem — match me with whoever needs a roommate" required><span class="gf-option-label">Yes, no problem — match me with whoever needs a roommate</span></label>
+              <label class="gf-option"><input type="radio" name="entry.1091068811" value="I'd prefer to room with someone I already know (name them in the next question)"><span class="gf-option-label">I'd prefer to room with someone I already know</span></label>
+              <label class="gf-option"><input type="radio" name="entry.1091068811" value="I'm interested in having my own room — I'll be in touch about solo pricing"><span class="gf-option-label">I'm interested in having my own room</span></label>
+            </div>
+          </div>
+
+          <div class="gf-field">
+            <label class="gf-label" for="f-roommate">Roommate preference <span class="gf-optional">(optional)</span></label>
+            <input class="gf-input" type="text" id="f-roommate" name="entry.639538903" placeholder="Name someone you'd like to room with">
+          </div>
+        </div>
+
+        <!-- ── The weekend ── -->
+        <div class="gf-section">
+          <div class="gf-section-label">The weekend</div>
+
+          <div class="gf-field">
+            <div class="gf-label required">When do you plan to arrive on Thursday, August 6?</div>
+            <div class="gf-options">
+              <label class="gf-option"><input type="radio" name="entry.629419634" value="Before noon (Thursday morning)" required><span class="gf-option-label">Before noon</span></label>
+              <label class="gf-option"><input type="radio" name="entry.629419634" value="12pm – 3pm (early afternoon)"><span class="gf-option-label">12pm – 3pm</span></label>
+              <label class="gf-option"><input type="radio" name="entry.629419634" value="3pm – 6pm (late afternoon)"><span class="gf-option-label">3pm – 6pm</span></label>
+              <label class="gf-option"><input type="radio" name="entry.629419634" value="6pm – 9pm (evening)"><span class="gf-option-label">6pm – 9pm</span></label>
+              <label class="gf-option"><input type="radio" name="entry.629419634" value="After 9pm (late night)"><span class="gf-option-label">After 9pm</span></label>
+              <label class="gf-option"><input type="radio" name="entry.629419634" value="Not arriving Thursday — I'll join the group Friday"><span class="gf-option-label">Not arriving Thursday — I'll join the group Friday</span></label>
+              <label class="gf-option"><input type="radio" name="entry.629419634" value="I haven't booked flights yet"><span class="gf-option-label">I haven't booked flights yet</span></label>
+            </div>
+          </div>
+
+          <div class="gf-field">
+            <div class="gf-label required">Saturday morning: yoga, guided hike, or both?</div>
+            <div class="gf-options">
+              <label class="gf-option"><input type="radio" name="entry.1303952414" value="Yoga on the vineyard" required><span class="gf-option-label">Yoga on the vineyard 🧘</span></label>
+              <label class="gf-option"><input type="radio" name="entry.1303952414" value="Guided hike"><span class="gf-option-label">Guided hike 🥾</span></label>
+              <label class="gf-option"><input type="radio" name="entry.1303952414" value="Both — sign me up for everything!"><span class="gf-option-label">Both — sign me up for everything!</span></label>
+              <label class="gf-option"><input type="radio" name="entry.1303952414" value="No thanks — I'll sleep in"><span class="gf-option-label">No thanks — I'll sleep in 😴</span></label>
+            </div>
+          </div>
+
+          <div class="gf-field">
+            <div class="gf-label required">Saturday afternoon: spa treatments?</div>
+            <div class="gf-options">
+              <label class="gf-option"><input type="radio" name="entry.241368883" value="Yes, definitely" required><span class="gf-option-label">Yes, definitely ✨</span></label>
+              <label class="gf-option"><input type="radio" name="entry.241368883" value="Maybe — tell me more"><span class="gf-option-label">Maybe — tell me more</span></label>
+              <label class="gf-option"><input type="radio" name="entry.241368883" value="No thanks"><span class="gf-option-label">No thanks</span></label>
+            </div>
+          </div>
+
+          <div class="gf-field">
+            <div class="gf-label required">Sunday: <a href="https://sfoutsidelands.com/news/daily-lineups-are-here/" target="_blank" rel="noopener">Outside Lands Festival</a> add-on — RÜFÜS DU SOL headlines!</div>
+            <div class="gf-options">
+              <label class="gf-option"><input type="radio" name="entry.1408744162" value="Yes, I'm staying Sunday and want to go to Outside Lands" required><span class="gf-option-label">Yes — staying Sunday &amp; going to Outside Lands 🎶</span></label>
+              <label class="gf-option"><input type="radio" name="entry.1408744162" value="Yes, I'm staying Sunday but planning my own day"><span class="gf-option-label">Yes, staying Sunday but planning my own day</span></label>
+              <label class="gf-option"><input type="radio" name="entry.1408744162" value="No — I'll be flying home Sunday"><span class="gf-option-label">No — flying home Sunday</span></label>
+              <label class="gf-option"><input type="radio" name="entry.1408744162" value="Not sure yet"><span class="gf-option-label">Not sure yet</span></label>
+            </div>
+          </div>
+        </div>
+
+        <!-- ── Finishing touches ── -->
+        <div class="gf-section">
+          <div class="gf-section-label">Finishing touches</div>
+
+          <div class="gf-field">
+            <div class="gf-label required">T-shirt / swag size</div>
+            <div class="gf-options gf-sizes">
+              <label class="gf-option gf-option-pill"><input type="radio" name="entry.890059747" value="XS" required><span class="gf-option-label">XS</span></label>
+              <label class="gf-option gf-option-pill"><input type="radio" name="entry.890059747" value="S"><span class="gf-option-label">S</span></label>
+              <label class="gf-option gf-option-pill"><input type="radio" name="entry.890059747" value="M"><span class="gf-option-label">M</span></label>
+              <label class="gf-option gf-option-pill"><input type="radio" name="entry.890059747" value="L"><span class="gf-option-label">L</span></label>
+              <label class="gf-option gf-option-pill"><input type="radio" name="entry.890059747" value="XL"><span class="gf-option-label">XL</span></label>
+              <label class="gf-option gf-option-pill"><input type="radio" name="entry.890059747" value="XXL"><span class="gf-option-label">XXL</span></label>
+            </div>
+          </div>
+
+
+          <div class="gf-field">
+            <label class="gf-label" for="f-other">Anything else we should know? <span class="gf-optional">(optional)</span></label>
+            <textarea class="gf-input gf-textarea" id="f-other" name="entry.609554023" rows="3" placeholder="Questions, requests, concerns…"></textarea>
+          </div>
+        </div>
+
+        <div class="gf-submit-row">
+          <button type="submit" class="btn btn-gold gf-submit">RSVP for Napa ✦</button>
+        </div>
+
+      </form>
+
+      <!-- Hidden iframe absorbs Google's response page so the user stays here -->
+      <iframe name="hidden_iframe" style="display:none" title="form-target"></iframe>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── THE HOTEL ─────────────────────────────────────── -->
+<section id="hotel">
+  <div class="container">
+    <div class="s-eyebrow">Where We're Staying</div>
+    <h2 class="s-title">The Hotel</h2>
+    <p class="s-desc">Our home base in the heart of San Francisco. Details are being finalized — you'll find everything you need right here once confirmed.</p>
+
+    <div class="hotel-card">
+      <div class="hotel-glyph">🕯️</div>
+      <div class="hotel-text">
+        <h3>The Westin St. Francis</h3>
+        <p>San Francisco's most storied hotel, sitting right on Union Square since 1904. Grand architecture, impeccable service, and steps from everything — the perfect home base for the weekend.</p>
+        <div class="hotel-meta">
+          <div class="hotel-meta-row">
+            <span class="hm-label">Address</span>
+            <span class="hm-value"><a href="https://maps.google.com/?q=335+Powell+St,+San+Francisco,+CA+94102" target="_blank" rel="noopener">335 Powell St, San Francisco, CA 94102</a></span>
+          </div>
+          <div class="hotel-meta-row">
+            <span class="hm-label">Book</span>
+            <span class="hm-value"><a href="https://www.marriott.com/en-us/hotels/sfoxs-the-westin-st-francis-san-francisco-on-union-square/overview/" target="_blank" rel="noopener">marriott.com ↗</a></span>
+          </div>
+          <div class="hotel-meta-row">
+            <span class="hm-label">Group Rate</span>
+            <span class="hm-value">Details coming soon <span class="soon-pill">TBD</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── GETTING HERE ──────────────────────────────────── -->
+<section id="wayfinding">
+  <div class="container">
+    <div class="s-eyebrow">Getting Here</div>
+    <h2 class="s-title">Find Your Way</h2>
+    <p class="s-desc">The Bay Area is served by three major airports. Here's everything you need to pick the right one.</p>
+
+    <div class="airports-row">
+      <div class="ap-col">
+        <div class="ap-code">SFO</div>
+        <div class="ap-name">San Francisco International</div>
+        <div class="ap-detail">
+          The main hub — the most airline options, including international routes. BART connects you to downtown in ~25 minutes for $10, or take a rideshare.
+          <br><span class="ap-rec">Most Convenient</span>
+        </div>
+      </div>
+      <div class="ap-col">
+        <div class="ap-code">OAK</div>
+        <div class="ap-name">Oakland International</div>
+        <div class="ap-detail">
+          Just across the bay. Often has lower fares — particularly on Southwest. About 35–45 minutes to downtown SF by BART or rideshare.
+        </div>
+      </div>
+      <div class="ap-col">
+        <div class="ap-code">SJC</div>
+        <div class="ap-name">San Jose International</div>
+        <div class="ap-detail">
+          About 50–60 minutes south of the city. Worth checking if fares are meaningfully lower — smaller airport, lighter crowds.
+        </div>
+      </div>
+    </div>
+
+    <div class="transport-row">
+      <div class="tr-col">
+        <div class="tr-label">BART</div>
+        <div class="tr-text">Fast, affordable, and reliable from SFO and OAK directly into the city. No traffic, no guesswork.</div>
+      </div>
+      <div class="tr-col">
+        <div class="tr-label">Rideshare</div>
+        <div class="tr-text">Uber and Lyft are everywhere in the Bay Area — ideal if you have luggage or are arriving late.</div>
+      </div>
+      <div class="tr-col">
+        <div class="tr-label">On Foot</div>
+        <div class="tr-text">San Francisco is wonderfully walkable. Once you're checked in, many of our spots will be steps away.</div>
+      </div>
+      <div class="tr-col">
+        <div class="tr-label">Napa Day</div>
+        <div class="tr-text">A shuttle will pick up from the hotel Friday morning and bring everyone back in the evening — no car rental needed.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── OUTSIDE LANDS ──────────────────────────────────── -->
+<section id="outsidelands">
+  <div class="container">
+    <div class="s-eyebrow">Sunday · Optional Extra Night</div>
+    <h2 class="s-title">Outside Lands</h2>
+    <p class="s-desc">Not ready to leave? Stay one more day and close out the weekend at one of the best music festivals in the country.</p>
+
+    <div class="ol-card">
+      <div class="ol-main">
+        <div class="ol-eyebrow">Optional Add-On</div>
+        <div class="ol-title">Outside Lands<br>Music Festival</div>
+        <div class="ol-loc">Golden Gate Park · San Francisco · August 9, 2026</div>
+        <p class="ol-body">
+          One of the most iconic music festivals in the country, right here in San Francisco's legendary Golden Gate Park. If you'd like to extend your trip by a day and close out the weekend in style, single-day Sunday passes are available to purchase. This is entirely optional — most guests will be flying home Sunday — but if you're thinking about staying, please reach out to me first so we can coordinate!
+        </p>
+        <div class="ol-actions">
+          <a href="https://sfoutsidelands.com" target="_blank" rel="noopener noreferrer" class="btn btn-gold">View Tickets ↗</a>
+          <a href="#contact" class="btn btn-ghost-light">Message the Bride</a>
+        </div>
+        <p class="ol-note">* Tickets are self-purchased and not included in the weekend. Reach out before buying so we can coordinate.</p>
+      </div>
+
+      <div class="ol-stub">
+        <span class="stub-v">Extra Night</span>
+        <div class="stub-icon">☀</div>
+        <div class="stub-date">AUG<br>9</div>
+        <div class="stub-icon">♪</div>
+        <span class="stub-v">Optional</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHAT TO KNOW ──────────────────────────────────── -->
+<section id="tips">
+  <div class="container">
+    <div class="s-eyebrow">Before You Pack</div>
+    <h2 class="s-title">Good to Know</h2>
+    <p class="s-desc">A few things worth knowing before you arrive.</p>
+
+    <div class="tips-grid">
+      <div class="tip">
+        <div class="tip-num">01</div>
+        <div class="tip-title">The Weather</div>
+        <div class="tip-text">August in San Francisco can be cooler and foggier than you'd expect — especially mornings and evenings. Napa will be hot (often 90°F+). Pack layers for the city and light breezy clothes for the valley.</div>
+      </div>
+      <div class="tip">
+        <div class="tip-num">02</div>
+        <div class="tip-title">What to Bring</div>
+        <div class="tip-text">Comfortable walking shoes are essential — SF is hilly. A light jacket for SF evenings, something comfortable for Napa's warmth, and yoga clothes for Sunday morning.</div>
+      </div>
+      <div class="tip">
+        <div class="tip-num">03</div>
+        <div class="tip-title">Book Early</div>
+        <div class="tip-text">August is peak season across the Bay Area. Flights and accommodations fill up quickly — lock in your travel as soon as possible to get the best options.</div>
+      </div>
+      <div class="tip">
+        <div class="tip-num">04</div>
+        <div class="tip-title">Napa Day</div>
+        <div class="tip-text">Summer Napa is magical. We'll handle the winery reservations and group logistics — just come ready for a beautiful day in wine country.</div>
+      </div>
+      <div class="tip">
+        <div class="tip-num">05</div>
+        <div class="tip-title">Budget</div>
+        <div class="tip-text">A full breakdown of costs will be shared closer to the trip. Napa tastings and group activities may have a small contribution — we'll keep it fair and transparent.</div>
+      </div>
+      <div class="tip">
+        <div class="tip-num">06</div>
+        <div class="tip-title">Group Chat</div>
+        <div class="tip-text">We'll set up a group chat closer to the date for real-time coordination, arrival updates, and all the anticipatory excitement.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── GET IN TOUCH ───────────────────────────────────── -->
+<section id="contact">
+  <div class="container">
+    <div class="s-eyebrow">Questions?</div>
+    <h2 class="s-title">Get in Touch</h2>
+    <!-- Replace this placeholder with your real email address -->
+    <p class="contact-body">
+      Questions about the weekend, want to discuss the Outside Lands option, or simply bursting with excitement? Reach out to Donna — by email or text.
+    </p>
+    <a href="mailto:dlyakhov23@gmail.com" class="contact-email">dlyakhov23@gmail.com</a>
+    <div style="display:flex; gap:0.85rem; justify-content:center; flex-wrap:wrap;">
+      <a href="mailto:dlyakhov23@gmail.com?subject=Napa Before Nuptials" class="btn btn-ivory">Send an Email</a>
+      <a href="sms:+17735547211&body=Hey Donna! Reaching out about Napa Before Nuptials..." class="btn btn-ivory" style="background:transparent; border:1px solid rgba(248,244,238,0.5); color:var(--ivory);">Text Me</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─────────────────────────────────────────── -->
+<footer>
+  Napa Before Nuptials &nbsp;<em>◆</em>&nbsp; August 6–9, 2026 &nbsp;<em>◆</em>&nbsp; San Francisco, California
+</footer>
+
+</body>
+</html>
