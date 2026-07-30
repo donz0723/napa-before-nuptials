@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boon Fly Cafe Menu · Napa Before The Nuptials</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600;1,700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --ivory:    #FDF0F5;
+      --ivory-2:  #F5E8EF;
+      --dark:     #1A0F26;
+      --pink:     #D4607E;
+      --pink-l:   #F4B8CE;
+      --text:     #2A1428;
+      --mid:      #7A5870;
+      --faint:    rgba(42,20,40,0.35);
+      --rule:     rgba(212,96,126,0.12);
+      --rule-g:   rgba(212,96,126,0.22);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--ivory);
+      color: var(--text);
+      padding: 3rem 1.5rem 5rem;
+    }
+
+    .wrap {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .back {
+      display: inline-block;
+      margin-bottom: 2rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--mid);
+      text-decoration: none;
+    }
+    .back:hover { color: var(--pink); }
+
+    .eyebrow {
+      font-size: 0.7rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--pink);
+      margin-bottom: 0.5rem;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 2.6rem;
+      color: var(--dark);
+      margin-bottom: 0.3rem;
+    }
+
+    .sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.05rem;
+      color: var(--mid);
+      margin-bottom: 2.5rem;
+    }
+
+    .section {
+      margin-bottom: 2.2rem;
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-style: italic;
+      font-size: 1.5rem;
+      color: var(--pink);
+      border-bottom: 1px solid var(--rule-g);
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .section-note {
+      font-size: 0.82rem;
+      color: var(--faint);
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .dish {
+      margin-bottom: 1.1rem;
+    }
+
+    .dish-name {
+      font-weight: 500;
+      font-size: 0.95rem;
+      letter-spacing: 0.02em;
+      color: var(--text);
+    }
+
+    .dish-tag {
+      font-size: 0.72rem;
+      color: var(--pink);
+      font-weight: 400;
+    }
+
+    .dish-desc {
+      font-size: 0.88rem;
+      color: var(--mid);
+      line-height: 1.5;
+      margin-top: 0.15rem;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--faint);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <a href="index.html" class="back">← Back to the schedule</a>
+
+    <div class="eyebrow">Friday · 11am Lunch</div>
+    <h1>Boon Fly Cafe</h1>
+    <div class="sub">Large Party Brunch Menu — 9 guests and over, $45.00 per person++</div>
+
+    <div class="section">
+      <div class="section-title">Starters</div>
+      <div class="section-note">Pre-select two items (family style)</div>
+
+      <div class="dish">
+        <div class="dish-name">Banana Bread</div>
+        <div class="dish-desc">lemon custard, berries</div>
+      </div>
+      <div class="dish">
+        <div class="dish-name">Greek Yogurt</div>
+        <div class="dish-desc">housemade granola, berries</div>
+      </div>
+      <div class="dish">
+        <div class="dish-name">Avocado Toast <span class="dish-tag">(vegan, GF bread available)</span></div>
+        <div class="dish-desc">serrano, red onions, cilantro, cucumber, radish, cherry tomato, levain toast · add smoked salmon +8 (pre plate)</div>
+      </div>
+      <div class="dish">
+        <div class="dish-name">Little Gem Caesar</div>
+        <div class="dish-desc">roasted red onions, shaved parmesan, croutons</div>
+      </div>
+      <div class="dish">
+        <div class="dish-name">Our Chopped Salad <span class="dish-tag">(vegan, remove egg)</span></div>
+        <div class="dish-desc">garbanzo beans, tomato, marcona almonds, red onion, olives, hard-boiled egg, buttermilk dressing</div>
+      </div>
+      <div class="dish">
+        <div class="dish-name">Salanova Lettuce <span class="dish-tag">(vegan, remove cheese)</span></div>
+        <div class="dish-desc">tenbrink roasted beets, basil, sourdough crumble, chenel goat cheese, tarragon vinaigrette</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Flatbreads</div>
+      <div class="section-note">Additional option (family style)</div>
+
+      <div class="dish">
+        <div class="dish-name">Gingrass Smoked Salmon <span class="dish-tag">28</span></div>
+        <div class="dish-desc">fromage blanc, red onion, parmesan, lemon crème fraîche · add capers +2</div>
+      </div>
+      <div class="dish">
+        <div class="dish-name">Breakfast Flatbread</div>
+        <div class="dish-desc">two over-easy eggs, caramelized onions, applewood smoked bacon, mozzarella</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Mains</div>
+      <div class="section-note">Individual selection</div>
+
+      <div class="dish">
+        <div class="dish-name">The Carneros Breakfast</div>
+        <div class="dish-desc">two eggs any style, crispy hash browns, toast, choice of breakfast meat</div>
+      </div>
+      <div class="dish">
+        <div class="dish-name">The Benedict</div>
+        <div class="dish-desc">toasted english muffin, caggiano ham, poached eggs, jalapeño hollandaise, crispy hash browns</div>
+      </div>
+      <div class="dish">
+        <div class="dish-name">Dungeness Crab Benedict <span class="dish-tag">additional 8</span></div>
+        <div class="dish-desc">crab cake, poached eggs, jalapeño hollandaise, crispy hash browns</div>
+      </div>
+      <div class="dish">
+        <div class="dish-name">Smoky Bacon Frittata</div>
+        <div class="dish-desc">bacon, tomato, bell pepper, mixed green salad</div>
+      </div>
+      <div class="dish">
+        <div class="dish-name">"Green Eggs and Ham"</div>
+        <div class="dish-desc">poached eggs, caggiano ham, lemon leek cream, crispy hash browns</div>
+      </div>
+      <div class="dish">
+        <div class="dish-name">Breakfast Burrito</div>
+        <div class="dish-desc">flour tortilla, cheese blend, crispy hash browns, chorizo, scrambled eggs, sour cream, pico de gallo, smothered in chipotle salsa</div>
+      </div>
+      <div class="dish">
+        <div class="dish-name">Chef Pedro's Chilaquiles <span class="dish-tag">(vegan, remove cheese, crème and egg, replace with avocado)</span></div>
+        <div class="dish-desc">corn chips, avocado, pico de gallo, lemon crème fraîche, queso fresco, red onion, two eggs</div>
+      </div>
+      <div class="dish">
+        <div class="dish-name">Corned Beef Hash</div>
+        <div class="dish-desc">house made hash, poached eggs, spinach, onion, jalapeño hollandaise</div>
+      </div>
+      <div class="dish">
+        <div class="dish-name">Chicken &amp; Waffle</div>
+        <div class="dish-desc">jidori chicken, malt waffle, maple syrup, whipped brown butter</div>
+      </div>
+      <div class="dish">
+        <div class="dish-name">BF Cheeseburger</div>
+        <div class="dish-desc">potato bun, choice of cheese, choice of fries or baby greens</div>
+      </div>
+      <div class="dish">
+        <div class="dish-name">Beer-Battered Fish Tacos <span class="dish-tag">(vegan, remove crème fraîche and fish, replace with avocado)</span></div>
+        <div class="dish-desc">corn tortillas, slaw, lemon crème fraîche</div>
+      </div>
+      <div class="dish">
+        <div class="dish-name">B.L.T. <span class="dish-tag">(GF bread available)</span></div>
+        <div class="dish-desc">applewood smoked bacon, mayonnaise, sourdough · add a fried egg +3, grilled chicken +8</div>
+      </div>
+      <div class="dish">
+        <div class="dish-name">The Reuben <span class="dish-tag">(GF bread available, not rye)</span></div>
+        <div class="dish-desc">corned beef, swiss cheese, sauerkraut, thousand island dressing, rye bread</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Sweet Ending</div>
+      <div class="section-note">Family style</div>
+
+      <div class="dish">
+        <div class="dish-name">Boon Fly Donuts</div>
+        <div class="dish-desc">chocolate dipping sauce</div>
+      </div>
+    </div>
+
+    <footer>Napa Before The Nuptials &nbsp;◆&nbsp; August 6–9, 2026</footer>
+  </div>
+</body>
+</html>
